@@ -3,57 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>encriptador|desencriptador</title>
+    <title>code|decode</title>
     <!-- google font -->
     <style>
 
-        body {
+        html, body, section {
             background-color: white;
+            height: 100%;
         }
 
-        .container {
-  background-color: blue;
-  flex-wrap: wrap;
-  width: 650px;
-  height: 250px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 0 30px 30px 30px;
-  border-radius: 6px;
-  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+        div {
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
 }
+
+        /* .container {
+            background-color: blue;
+            flex-wrap: wrap;
+            width: 650px;
+            height: 250px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 0 30px 30px 30px;
+            border-radius: 6px;
+            box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+            } */
         
         img {
-            height: auto;
-            margin: 30px;
+            height:;
+            margin: 10px;
         }
         
+        .contenedor {
+            display: flex;
+        }
+
+        .izquierda {
+            /* background-color: cyan; */
+            flex: 1;
+            padding: 1rem;
+        }
+
+        .derecha {
+            /* background-color: cyan; */
+            flex: 1;
+            padding: 1rem;
+        }
+
         h1 {
             font-family: Arial, Helvetica, sans-serif;
             color: black;
-            padding-left: 30px;
+            /* padding-left: 30px; */
             font-size: 4rem;
             letter-spacing: -2px;
+            line-height : 32px;
+            margin: 4rem 0 1.5rem 10px;
+            position: relative;
         }
 
         h2 {
             font-family: Arial, Helvetica, sans-serif;
             color: black;
-            padding-left: 30px;
+            padding-left: 5px;
             font-weight: 700;
-            font-size: 2rem;
+            font-size: 1.5rem;
             letter-spacing: -2px;
         }
 
         input[type=text], select {
             height: 100px;
-            width: 50%;
+            width: 100%;
             padding: 10px 10px;
-            margin: px 0;
+            margin: -1.8rem 2rem 0rem 0.28rem;
             display: inline-block;
             border: none;
-            border-top: 4px solid black;
+            border-top: 3px solid black;
             box-sizing: border-box;
             /* background-color: rgb(247, 247, 247); */
             /* tipografía? */
@@ -82,16 +108,16 @@
         }
 
         button:hover{
-       background-color: #E74036;
-       /* japan red */
-       padding: 3px;
-       margin: 3px;
+            background-color: #E74036;
+            /* japan red */
+            padding: 3px;
+            margin: 3px;
 }
 
         footer {
             font-family: monospace;
             text-align: center;
-            position:absolute;
+            position: fixed;
             bottom: 0;
             width: 100%;
             height: 40px;   /* Height of the footer */
@@ -108,22 +134,29 @@
 
 <img src="https://i.ibb.co/fGgYmyx/logo-alura-ngo-1x.png" alt="logo-alura-ngo-1x" border="0">
 
-<!-- h1 "encriptador / desencriptador" arial bold minimalista. -->
-<div class="contenedor">
-    <h1>encriptador /<br>desencriptador</h1>
+<!-- h1 "code / decode" arial bold minimalista a modo "logo" -->
+<h1>code /<br>decode</h1>
+
+<section class="contenedor">
+    <div class="izquierda">
+
     <h2>IN</h2>
     <input type="text" id="in" name="in" required
         minlength="" maxlength="" size="100">
         <!-- <textarea>Escribe</textarea> -->
         <br>
-        <button>encriptar</button><button>desencriptar</button><button>reset</button>
-        <h2>OUT</h2>
+        <button>code</button><button>decode</button><button>reset</button>
+    </div>
+
+    <div class="derecha">
+    <h2>OUT</h2>
     <input type="text" id="out" name="out" required
         minlength="" maxlength="" size="100">
         <!-- <textarea>Resultado</textarea> -->
         <br>
-        <button>copiar</button><button>reset</button>        
-</div>
+        <button>copy</button><button>reset</button>        
+    </div>
+</section>
        
 <footer>lección alura oracle ONE / dev: roberto raúl gutiérrez olivas / 2022 -</footer>
 </body>
