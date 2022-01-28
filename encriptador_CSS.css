@@ -31,7 +31,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position:relative;
+  position: relative;
 }
 
 .izquierda {
@@ -64,7 +64,11 @@ textarea {
   resize: none;
 }
 
-#codeButton, #decodeButton, #resetButton, #copyButton, #outputResetButton {
+#codeButton,
+#decodeButton,
+#resetButton,
+#copyButton,
+#outputResetButton {
   display: inline-block;
   white-space: nowrap;
   background: none;
@@ -76,13 +80,17 @@ textarea {
   font-size: 0.8rem;
 }
 
-#codeButton:hover, #decodeButton:hover, #resetButton:hover, #copyButton:hover, #outputResetButton:hover {
+#codeButton:hover,
+#decodeButton:hover,
+#resetButton:hover,
+#copyButton:hover,
+#outputResetButton:hover {
   background-color: #e74036; /* japan red */
   padding: 3px;
   margin: 3px 8px 3px 8px;
 }
 
-input[type=button]{
+input[type="button"] {
   display: inline-block;
   white-space: nowrap;
   background: none;
@@ -94,7 +102,7 @@ input[type=button]{
   font-size: 0.8rem;
 }
 
-input[type=button]:hover {
+input[type="button"]:hover {
   background-color: #e74036; /* japan red */
   padding: 3px;
   /* margin: 3px 8px 3px 8px; */
