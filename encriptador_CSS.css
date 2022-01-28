@@ -9,7 +9,7 @@ body {
 div {
   display: inline-table;
   flex-direction: inline;
-  /* min-height: 100vh; */
+  min-height: 100vh;
 }
 
 img {
@@ -64,7 +64,7 @@ textarea {
   resize: none;
 }
 
-button {
+#codeButton, #decodeButton, #resetButton, #copyButton, #outputResetButton {
   display: inline-block;
   white-space: nowrap;
   background: none;
@@ -76,10 +76,28 @@ button {
   font-size: 0.8rem;
 }
 
-button:hover {
+#codeButton:hover, #decodeButton:hover, #resetButton:hover, #copyButton:hover, #outputResetButton:hover {
   background-color: #e74036; /* japan red */
   padding: 3px;
   margin: 3px 8px 3px 8px;
+}
+
+input[type=button]{
+  display: inline-block;
+  white-space: nowrap;
+  background: none;
+  font-family: sans-serif;
+  font-weight: 700;
+  border: none;
+  padding: 3px;
+  /* margin: 3px 8px 3px 8px; */
+  font-size: 0.8rem;
+}
+
+input[type=button]:hover {
+  background-color: #e74036; /* japan red */
+  padding: 3px;
+  /* margin: 3px 8px 3px 8px; */
 }
 
 .botonesizq {
@@ -90,6 +108,7 @@ button:hover {
 .botonesder {
   white-space: nowrap;
   display: block;
+  margin: auto;
 }
 
 footer {

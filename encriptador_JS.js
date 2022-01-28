@@ -1,77 +1,63 @@
 
 
-/* - Llaves" de encriptación:
+/* reglas de encriptación:
 
-La letra "e" es convertida para "enter"
-La letra "i" es convertida para "imes"
-La letra "a" es convertida para "ai"
-La letra "o" es convertida para "ober"
-La letra "u" es convertida para "ufat" 
+"a" = "ai"
+"e" = "enter"
+"i" = "imes"
+"o" = "ober"
+"u" = "ufat" 
 
-- Para desencriptación utilizaremos las mismas a la inversa.
-- No se aceptan acentos ni símbolos (RegExp).
+- Para desencriptación utilizaremos las mismas reglas a la inversa.
 
-- Botones de "code" / "decode" y "reset".
-- Botón de "copiar" desde el campo "OUT".
+- Botones de "code", "decode" y "reset" para el campo "IN".
+- Botón de "copy" y "reset" para el campo "OUT".
 
 */
 
 function codeMsg() {
   var coding = document.getElementById("userInput").value;
-  // reglas de encriptado -->
-  var codeMsg = conding.replace(/e/gi, "enter").replace(/i/gi, "imes").replace(/a/gi, "ai").replace(/o/gi, "ober").replace(/u/gi, "ufat");
-  document.getElementById("outputText").value = coding;
-  document.getElementById("userInput").value = " ";
+  var codeMsg = coding.replace(/e/gi, "enter").replace(/i/gi, "imes").replace(/a/gi, "ai").replace(/o/gi, "ober").replace(/u/gi, "ufat");
+  document.getElementById("outputCode").value = codeMsg;
   console.log(codeMsg);
+  document.getElementById("userInput").value = coding;
 };
 
 function decodeMsg() {
-  var decoding = document.getElementById("outputCode").value;
+  var decoding = document.getElementById("userInput").value;
   var decodeMsg = decoding.replace(/ai/gi, "a").replace(/enter/gi, "e").replace(/imes/gi, "i").replace(/ober/gi, "o").replace(/ufat/gi, "u");
-  document.getElementById("outputCode").value = decoding;
+  document.getElementById("outputCode").value = decodeMsg;
   console.log(decodeMsg);
-  document.getElementById("outputCode").value = " ";
+  document.getElementById("userInput").value = decoding;
 };
 
-function copy(){
-  var copyText = document.querySelector("#copy-Button");
-  copyText.select;
-  Document.execCommand("copy");
-};
+function copyToClipBoard() {
+  var content = document.getElementById("outputCode");
+
+  content.select();
+  document.execCommand("copy");
+
+  alert("copied");
+
+}
+
+function eraseText() {
+  document.getElementById("outputCode").value = "";
+}
 
 
-var codeButton = document.querySelector("#code-Button");
+
+// --- variables ------>
+
+var codeButton = document.querySelector("#codeButton");
 codeButton.addEventListener("click", function (event) {
   event.preventDefault()
   codeMsg();
 
 });
 
-var decodeButton = document.querySelector("#decode-Button");
+var decodeButton = document.querySelector("#decodeButton");
 decodeButton.addEventListener("click", function (event) {
   event.preventDefault();
   decodeMsg();
 });
-
-var copyButton = document.querySelector("#copy-Button");
-copyButton.addEventListener("click",function (event) {
-  event.preventDefault();
-  copy();
-});
-
-
-// <form action="">
-
-//               <input class="mensajeUsuario" type="text" id="mensajeUsuario" placeholder="Ingrese su texto aqui" />
-//               <h1>Encriptador de mensajes</h1>
-//               <h4>
-//                   <img class="advertencia" src="img/Vector.svg" alt="advertencia" />
-//                   Solo letras en minusculas y sin acento
-//               </h4>
-
-//               <input class="salidaMensaje" type="text" id="salidaMensaje" placeholder="Su texto encriptado" />
-//               <button type="submit" class="btn" id="btn-encriptar">Encriptar</button>
-//               <button type="submit" class="btn" id="btn-desencriptar">Desencriptar</button>
-//               <button type="submit" class="btn" id="btn-copiar">Copiar</button>
-
-//           </form>
