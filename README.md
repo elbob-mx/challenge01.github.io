@@ -1,4 +1,4 @@
-# Challenge-01
+# Challenge 01
 Challenge 1 Alura Latam Oracle ONE 
 
 En primer lugar, gracias a Alura Latam por esta oportunidad, he aprendido mucho creando mi primer proyecto.
