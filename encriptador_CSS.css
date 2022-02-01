@@ -129,7 +129,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 30px;
+  /* height: 30px; */
   padding-top: 250px;
   padding-bottom: 10px;
 }
@@ -137,8 +137,9 @@ footer {
 .wrapper {
   min-height: 100%;
   position: relative;
-  padding-bottom: 90px; /* footer's height */
+padding-bottom:90px; /* footer's height */
 }
+
 
 .void {
   height: auto;
