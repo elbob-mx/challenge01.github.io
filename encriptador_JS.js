@@ -8,7 +8,7 @@
 "o" = "ober"
 "u" = "ufat" 
 
-- Para desencriptación utilizaremos las mismas reglas a la inversa.
+- Para desencriptación se aplican las mismas reglas a la inversa.
 
 - Botones de "code", "decode" y "reset" para el campo "IN".
 - Botón de "copy" y "reset" para el campo "OUT".
